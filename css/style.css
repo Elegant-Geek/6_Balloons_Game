@@ -1,0 +1,77 @@
+body {
+	overflow: hidden; /*ensures no scrollbar appears*/
+	width: 100vw; /*body takes up 100% of the height of the screen (no scrollbar)*/
+	height: 100vh; /*vh here not vw*/
+	padding: 0;
+	margin: 0;
+	font-family: Arial;
+}
+.balloon {
+	width: 100px;
+	height: 200px;
+	/*Each balloon must float bottom to top. Set position absolute for each balloon*/
+	position: absolute;
+	top: 100vh; /*makes each balloon invisible and at the bottom of the screen! ("top = 100% of the bottom of the screen"*/
+	background-size: cover; /*ensures image fits to the w*h set*/
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.balloon-red {
+	background-image: url(../images/balloon-red.png);
+}
+.balloon-yellow {
+	background-image: url(../images/balloon-yellow.png);
+}
+.balloon-blue {
+	background-image: url(../images/balloon-blue.png);
+}
+.balloon-violet {
+	background-image: url(../images/balloon-violet.png);
+}
+.balloon-green {
+	background-image: url(../images/balloon-green.png);
+}
+.total-shadow {
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, .6);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000; /*the default position is static (z index doesnt work with static so change position to relative)*/
+	position: relative;
+}
+.total-block {
+	background: #fff;
+	padding: 10px 100px 40px;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+}
+.lose {
+	display: none;
+}
+.win {
+	display: none;
+}
+.score-block {
+	background: #efefef;
+	width: 300px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px 20px 0 0;
+	position: absolute;
+	bottom: 0;
+	left: calc(50% - 150px); /*the 50% sets start of block to start in the middle of the page. The -150px re-centers it*/
+}
+
+.start-game-window {
+	width: 100vw; /*body takes up 100% of the height of the screen (no scrollbar)*/
+	height: 100vh; /*vh here not vw*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
